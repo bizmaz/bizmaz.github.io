@@ -725,6 +725,10 @@ a.back-to-top:hover, a.back-to-top:focus {
   overflow: hidden;
   position: relative;
 }
+.hero-area-bg .green-cyan{
+	background: linear-gradient(166deg,#0097d6,#00c8c1);
+	background-color: #fff;
+}
 
 #hero-area .overlay {
   position: absolute;
