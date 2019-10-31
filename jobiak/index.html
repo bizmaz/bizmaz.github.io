@@ -3,15 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-<script src="https://d14oyx6svlks79.cloudfront.net/static-assets/jquery/jquery-3.2.1.min.js">
-    <script>
-        var baseContentUrl = "http://localhost:8089/assets/enterprisedistribution/content.html";
-        console.log(':: base::'+ baseContentUrl);
-        $.get(baseContentUrl, function(res, status){
-	      	$("html").html(response);
-	    });
-         
-    </script>
+<script src="https://d14oyx6svlks79.cloudfront.net/static-assets/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	var baseContentUrl = "http://localhost:8089/assets/enterprisedistribution/content.html";
+	console.log(':: base::' + baseContentUrl);
+	$.get(baseContentUrl, function(res, status) {
+		$("html").html(response);
+	});
+</script>
 </head>
 <body></body>
 </html>
