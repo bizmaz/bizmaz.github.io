@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <script>
-        var baseUrl = "https://app.jobiak.ai/";
+        var baseUrl = "https://test.jobiak.ai/";
         function load() {
+        	console.log(':: baseUrl:'+ baseUrl);
             var xhr = new XMLHttpRequest();
             xhr.onload = function() {
                 document.getElementsByTagName("body")[0].innerHTML = this.responseText;
