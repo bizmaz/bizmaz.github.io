@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<script src="https://d14oyx6svlks79.cloudfront.net/static-assets/jquery/jquery-3.2.1.min.js">
     <script>
-        var baseUrl = "http://localhost:8089/";
-        function load() {
-        	console.log(':: baseUrl:'+ baseUrl);
-            var xhr = new XMLHttpRequest();
-          /*   xhr.onload = function() {
-                document.getElementsByTagName("body")[0].innerHTML = this.responseText;
-                var scriptFile = document.createElement('script');
-                scriptFile.setAttribute("src", baseUrl + "assets/enterprisedistribution/script.js");
-                document.getElementsByTagName("head")[0].appendChild(scriptFile);
-            } */
-            xhr.open("GET", baseUrl + "assets/enterprisedistribution/content.html");
-            xhr.send();
-        }
+        var baseContentUrl = "http://localhost:8089/assets/enterprisedistribution/content.html";
+        $.get(baseContentUrl, function(res, status){
+	      	$("html").html(response);
+	    });
+         
     </script>
 </head>
-<body onload="load()"></body>
+<body></body>
 </html>
