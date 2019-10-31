@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <script>
+        var baseUrl = "https://app.jobiak.ai/";
+        function load() {
+            var xhr = new XMLHttpRequest();
+            xhr.onload = function() {
+                document.getElementsByTagName("body")[0].innerHTML = this.responseText;
+                var scriptFile = document.createElement('script');
+                scriptFile.setAttribute("src", baseUrl + "assets/enterprisedistribution/script.js");
+                document.getElementsByTagName("head")[0].appendChild(scriptFile);
+            }
+            xhr.open("GET", baseUrl + "assets/enterprisedistribution/content.html");
+            xhr.send();
+        }
+    </script>
+</head>
+<body onload="load()"></body>
+</html>
