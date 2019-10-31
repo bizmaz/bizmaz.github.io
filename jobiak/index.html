@@ -8,12 +8,12 @@
         function load() {
         	console.log(':: baseUrl:'+ baseUrl);
             var xhr = new XMLHttpRequest();
-            xhr.onload = function() {
+          /*   xhr.onload = function() {
                 document.getElementsByTagName("body")[0].innerHTML = this.responseText;
                 var scriptFile = document.createElement('script');
                 scriptFile.setAttribute("src", baseUrl + "assets/enterprisedistribution/script.js");
                 document.getElementsByTagName("head")[0].appendChild(scriptFile);
-            }
+            } */
             xhr.open("GET", baseUrl + "assets/enterprisedistribution/content.html");
             xhr.send();
         }
