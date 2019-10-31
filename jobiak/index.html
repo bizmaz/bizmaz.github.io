@@ -6,6 +6,7 @@
 <script src="https://d14oyx6svlks79.cloudfront.net/static-assets/jquery/jquery-3.2.1.min.js">
     <script>
         var baseContentUrl = "http://localhost:8089/assets/enterprisedistribution/content.html";
+        console.log(':: base::'+ baseContentUrl);
         $.get(baseContentUrl, function(res, status){
 	      	$("html").html(response);
 	    });
