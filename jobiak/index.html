@@ -10,7 +10,7 @@
             var xhr = new XMLHttpRequest();
             
             xhr.onload = function() {
-                
+                 document.getElementsByTagName("body")[0].innerHTML = this.responseXML;
             }
             xhr.open("GET", baseUrl + "assets/enterprisedistribution/content.html");
             xhr.setRequestHeader("Content-Type", "text/html");
