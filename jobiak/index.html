@@ -8,11 +8,12 @@
         var baseUrl = "http://localhost:8089/";
         function load() {
             var xhr = new XMLHttpRequest();
-            xhr.setRequestHeader("Content-Type", "text/html");
+            
             xhr.onload = function() {
                 
             }
             xhr.open("GET", baseUrl + "assets/enterprisedistribution/content.html");
+            xhr.setRequestHeader("Content-Type", "text/html");
             xhr.send();
         }
     </script>
