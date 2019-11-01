@@ -4,16 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <script type="text/javascript" src="http://localhost:8089/assets/enterprisedistribution/script.js" ></script>
     <script>
         var baseUrl = "http://localhost:8089/";
         function load() {
             var xhr = new XMLHttpRequest();
+            xhr.setRequestHeader("Content-Type", "text/html");
             xhr.onload = function() {
-                document.getElementsByTagName("body")[0].innerHTML = this.responseText;
-                var scriptFile = document.createElement('script');
-                scriptFile.setAttribute("src", baseUrl + "assets/enterprisedistribution/script1.js");
-                document.getElementsByTagName("head")[0].appendChild(scriptFile);
+                
             }
             xhr.open("GET", baseUrl + "assets/enterprisedistribution/content.html");
             xhr.send();
